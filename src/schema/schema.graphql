@@ -1,0 +1,32 @@
+type Query {
+  hello: String
+}
+
+type Mutation {
+  addUser(input: AddUserInput): User
+  addBook(input: AddBookInput): Book
+}
+
+input AddUserInput {
+  name: String
+  email: String
+}
+
+input AddBookInput {
+  name: String
+  title: String
+  userId: String
+}
+
+type User {
+  id: String
+  name: String
+  email: String
+}
+
+type Book {
+  id: String
+  name: String
+  title: String
+  userId: String
+}
